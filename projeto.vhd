@@ -1,5 +1,6 @@
 LIBRARY IEEE;
-library adder.vhd;
+library setesegmentos.vhd;
+library leitorsequencia.vhd;
 USE IEEE.std_logic_1164.ALL;
 
 ENTITY batalha_naval IS
