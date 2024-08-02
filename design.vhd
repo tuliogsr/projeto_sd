@@ -30,6 +30,8 @@ signal N2 : STD_LOGIC_VECTOR(9 downto 0);
 signal COMP1 : std_logic;
 signal COMP2 : std_logic;
 signal A, B : STD_LOGIC;
+signal magnitude1, magnitude2 : std_logic;
+
 
 component setesegmentos
         Port (
@@ -48,7 +50,7 @@ component registrador
            clock : in STD_LOGIC;
            reset : in STD_LOGIC;
            d : in STD_LOGIC_VECTOR(9 downto 0);
-           q : out STD_LOGIC_VECTOR(9 downto 0)
+           q : out STD_LOGIC_VECTOR(9 downto 0))
         );
     end component;
 component magnitude
@@ -119,7 +121,7 @@ Port map (
     END IF;
   END PROCESS;
 
-  next_state_and_output_logic: PROCESS (current_state, I)
+  next_state_and_output_logic: PROCESS (current_state, A, B, BTN, COMP1, COMP2, C, D, AC1, AC2, magnitude1, magnitude2, ataque_pos1, ataque_pos2)
   BEGIN
     O <= '0';
     next_state <= current_state;
