@@ -48,7 +48,7 @@ component registrador
            clock : in STD_LOGIC;
            reset : in STD_LOGIC;
            d : in STD_LOGIC_VECTOR(9 downto 0);
-           q : out STD_LOGIC_VECTOR(9 downto 0))
+           q : out STD_LOGIC_VECTOR(9 downto 0)
         );
     end component;
 component magnitude
